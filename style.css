@@ -16,18 +16,16 @@
 html {
   width: 100%;
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 body {
   background-image: url(IMG/home/background-home-desktop.jpg);
   background-size: cover;
   background-position: center;
-width: 100%;
+  width: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   transition: background-image 0.5s ease-in-out;
-  overflow-x: hidden;
 }
 
 main {
@@ -1139,4 +1137,12 @@ main {
     font-size: 2.4rem;
     margin-top: 0.8rem;
   }
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
