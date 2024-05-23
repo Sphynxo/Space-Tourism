@@ -28,6 +28,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .header {
   width: 100%;
   padding: 4rem 0 0 5.6rem;
@@ -210,6 +214,7 @@ body {
   /* gap: 20rem; */
   align-items: end;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  overflow-x: hidden;
 }
 
 .home-heading {
@@ -266,6 +271,7 @@ body {
   padding: 0 16rem 10% 16rem;
   transition: 0.2s ease-in-out;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  overflow-x: hidden;
 }
 
 .destination-heading,
@@ -384,6 +390,7 @@ body {
 
 .crew {
   padding: 4% 14rem 0 16rem;
+  overflow-x: hidden;
 }
 
 .crew-slide {
@@ -470,6 +477,7 @@ body {
 
 .technology {
   padding: 4% 0 4% 16rem;
+  overflow-x: hidden;
 }
 
 .technology-slide {
