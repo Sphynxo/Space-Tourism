@@ -1,0 +1,1132 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-barlow: "Barlow", sans-serif;
+  --font-barlow-condensed: "Barlow Condensed", sans-serif;
+  --font-bellefair: "Bellefair", serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url(IMG/home/background-home-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  padding: 4rem 0 0 5.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6rem;
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  background-color: #979797;
+  width: 80%;
+  height: 0.2rem;
+}
+
+.main-nav {
+  width: 100%;
+  display: flex;
+  gap: 4.8rem;
+  background-color: #9797973f;
+  padding: 4rem 16rem 0 12rem;
+  backdrop-filter: blur(1.8rem);
+}
+
+.nav-num,
+.nav-list,
+.planet-name-list {
+  font-family: var(--font-barlow-condensed);
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+.nav-list,
+.planet-name-list {
+  cursor: pointer;
+  padding: 0 0 4.2rem 0;
+  transition: 0.2s ease-in-out;
+}
+
+.nav-list:hover,
+.planet-name-list:hover {
+  box-shadow: inset 0 -0.2rem 0 0 #979797;
+  transition: 0.2s ease-in-out;
+}
+
+.active-link {
+  box-shadow: inset 0 -0.2rem 0 0 #ffffff;
+}
+
+.nav-num {
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+/* burger */
+.menu {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  border-radius: 0.8rem;
+}
+
+.burger {
+  width: 2.8rem;
+  height: 0.2rem;
+  background-color: #979797;
+  /* border-radius: 0.8rem; */
+  transition: all 1.2s ease-in-out;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  width: 2.8rem;
+  height: 0.2rem;
+  background-color: #979797;
+  /* border-radius: 0.8rem; */
+  transition: all 1s ease-in-out;
+}
+
+.burger::before {
+  transform: translateY(-1rem);
+}
+
+.burger::after {
+  transform: translateY(1rem);
+}
+
+.menu.open .burger {
+  background: transparent;
+}
+
+.menu.open .burger::after {
+  animation: close-menu 1s ease-in-out forwards;
+}
+
+.menu.open .burger::before {
+  animation: close-menu-before 1s ease-in-out forwards;
+}
+
+.menu.open .burger::before {
+  animation: close-menu-before 1s ease-in-out forwards;
+}
+
+.menu.open .burger::after {
+  animation: close-menu 1s ease-in-out forwards;
+}
+
+.menu.close .burger::before {
+  animation: open-menu-before 1s ease-in-out forwards;
+}
+
+.menu.close .burger::after {
+  animation: open-menu 1s ease-in-out forwards;
+}
+
+@keyframes close-menu {
+  50% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes close-menu-before {
+  50% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes open-menu {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+}
+
+@keyframes open-menu-before {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(1rem);
+  }
+}
+
+/* HOME */
+
+.home {
+  width: 100%;
+  /* margin-top: 1 */
+  padding: 8% 16rem 8% 16rem;
+  display: flex;
+  /* gap: 20rem; */
+  align-items: end;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.home-heading {
+  font-family: var(--font-barlow-condensed);
+  color: #d0d6f9;
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+}
+
+.space-heading {
+  font-family: var(--font-bellefair);
+  font-size: 15rem;
+  color: #ffffff;
+  font-weight: 400;
+  margin-top: 2.4rem;
+}
+
+.home-description {
+  font-family: var(--font-barlow);
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #d0d6f9;
+  line-height: 3.2rem;
+  margin-top: 2.4rem;
+}
+
+.home-btn-side {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.home-explore {
+  font-family: var(--font-bellefair);
+  color: #0b0d17;
+  font-size: 3.2rem;
+  padding: 12rem 6.4rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.home-explore:hover {
+  box-shadow: 0 0 0 50px #979797;
+  transition: 0.2s ease-in-out;
+}
+
+/* DESTINATION */
+.destination {
+  margin-top: 7.6rem;
+  padding: 0 16rem 10% 16rem;
+  transition: 0.2s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.destination-heading,
+.crew-heading,
+.technology-heading {
+  color: #ffffff;
+  font-family: var(--font-barlow-condensed);
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+  font-size: 2.8rem;
+}
+
+.destination-num,
+.crew-num,
+.technology-num {
+  color: #979797;
+  font-weight: 600;
+  margin-right: 2.8rem;
+}
+
+.planets {
+  display: flex;
+  margin-top: 6.4rem;
+  gap: 14rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.planet-image-side {
+  width: 40%;
+}
+
+.planet-image {
+  width: 100%;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.planet-text-side {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.planet-nav {
+  display: flex;
+  gap: 3.6rem;
+}
+
+.planet-name-list {
+  padding-bottom: 1.2rem;
+}
+
+.planet-name {
+  font-family: var(--font-bellefair);
+  color: #ffffff;
+  font-size: 10rem;
+  font-weight: 400;
+  margin-top: 3.6rem;
+  text-transform: uppercase;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.planet-description {
+  font-family: var(--font-barlow);
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #d0d6f9;
+  line-height: 3.2rem;
+  margin-top: 1.4rem;
+  height: 12.8rem;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.planet-line {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #979797;
+  margin-top: 5.4rem;
+}
+
+.planet-stats {
+  display: flex;
+  gap: 8rem;
+  margin-top: 2.8rem;
+}
+
+.distance-heading,
+.time-heading {
+  font-family: var(--font-barlow-condensed);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #d0d6f9;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.distance-num,
+.travel-num {
+  font-family: var(--font-bellefair);
+  font-size: 2.8rem;
+  color: #ffffff;
+  font-weight: 400;
+  margin-top: 1.2rem;
+  text-transform: uppercase;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+/* Crew */
+
+.crew {
+  padding: 4% 14rem 0 16rem;
+}
+
+.crew-slide {
+  display: flex;
+  gap: 8rem;
+  align-items: start;
+}
+
+.crew-txt-side {
+  margin-top: 8rem;
+  width: 60%;
+}
+
+.member-position {
+  font-family: var(--font-bellefair);
+  font-weight: 400;
+  font-size: 3.2rem;
+  color: #979797;
+  text-transform: uppercase;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.member-name,
+.info-heading {
+  font-family: var(--font-bellefair);
+  font-size: 5.6rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 1.4rem;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.about-member,
+.technology-info {
+  font-family: var(--font-barlow);
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #d0d6f9;
+  line-height: 3.2rem;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.about-member-container {
+  height: 14rem;
+  margin-top: 2.8rem;
+}
+
+.crew-img-side {
+  width: 40%;
+  height: 60.2rem;
+  overflow: hidden;
+}
+
+.member-image {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.slide-dots {
+  display: flex;
+  gap: 2.4rem;
+  margin-top: 8rem;
+}
+
+.dot {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #979797;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active-dot {
+  background-color: #ffffff;
+}
+
+/* Technology */
+
+.technology {
+  padding: 4% 0 4% 16rem;
+}
+
+.technology-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tech-slide-left {
+  width: 60%;
+  display: flex;
+  gap: 8rem;
+}
+
+.slide-nums {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.slide-number {
+  color: #ffffff;
+  font-size: 3.2rem;
+  padding: 2rem 3.2rem;
+  border: 0.1rem solid #979797;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active-num {
+  color: #0b0d17;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.terminology {
+  font-family: var(--font-barlow-condensed);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #d0d6f9;
+  text-transform: uppercase;
+  letter-spacing: 0.28rem;
+}
+
+.technology-info {
+  height: 24rem;
+}
+
+.info-heading {
+  height: 12.8rem;
+}
+
+.tech-slide-img {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+}
+
+.tech-image {
+  width: 100%;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+}
+.hide {
+  display: none;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@media (max-width: 68em) {
+  .main-nav {
+    padding: 2rem 4rem 0 8rem;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    padding: 0 0 2.2rem 0;
+  }
+  .line {
+    display: none;
+  }
+  .home {
+    padding: 8% 8rem 8% 8rem;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .home-explore {
+    font-size: 2.4rem;
+    padding: 8rem 4rem;
+  }
+
+  .destination {
+    padding: 0 12rem 10% 12rem;
+  }
+
+  .planets {
+    gap: 0;
+    margin-top: 3.2rem;
+    justify-content: space-between;
+  }
+
+  .planet-image-side {
+    width: 50%;
+  }
+
+  .planet-text-side {
+    width: 40%;
+  }
+
+  .planet-name {
+    font-size: 6.4rem;
+    margin-top: 2.4rem;
+  }
+
+  .planet-description {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .planet-stats {
+    gap: 0;
+    margin-top: 1.6rem;
+    justify-content: space-between;
+  }
+
+  .distance-num,
+  .travel-num {
+    font-size: 1.8rem;
+  }
+
+  .crew {
+    padding: 4% 8rem 4% 8rem;
+  }
+
+  .crew-slide {
+    width: 100%;
+    /* gap: 4rem; */
+    justify-content: space-between;
+  }
+
+  .member-position {
+    font-size: 2.4rem;
+  }
+
+  .member-name,
+  .info-heading {
+    font-size: 3.2rem;
+  }
+
+  .about-member,
+  .technology-info {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .crew-img-side {
+    height: 32rem;
+  }
+
+  .slide-dots {
+    margin-top: 3.2rem;
+  }
+
+  .dot {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .technology {
+    padding: 4% 0 4% 8rem;
+  }
+
+  .technology-slide {
+    margin-top: 2rem;
+    width: 100%;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .slide-number {
+    padding: 1.2rem 2.4rem;
+  }
+
+  .tech-slide-left {
+    gap: 2.4rem;
+    width: 60%;
+  }
+
+  .info-heading {
+    height: auto;
+  }
+
+  .technology-info {
+    margin-top: 1.6rem;
+    height: 22rem;
+    margin-bottom: 4rem;
+  }
+
+  .tech-slide-img {
+    width: 30%;
+  }
+
+  .tech-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 52em) {
+  .space-heading {
+    font-size: 12rem;
+  }
+
+  .home-description {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+
+  .destination {
+    padding: 0 8rem 10% 8rem;
+  }
+
+  .crew-slide {
+    align-items: end;
+  }
+
+  .member-name {
+    height: 7.4rem;
+  }
+
+  .about-member-container {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 48em) {
+  body {
+    background-image: url(IMG/home/background-home-tablet.jpg);
+  }
+
+  .header {
+    padding: 0 0 0 4rem;
+  }
+
+  .header-content {
+    justify-content: end;
+  }
+
+  .main-nav {
+    width: 80%;
+    padding: 4rem 2rem 0 2rem;
+    gap: 0;
+  }
+
+  .nav-list {
+    padding-bottom: 4.2rem;
+  }
+
+  .nav-num {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+    gap: 14rem;
+    padding: 4% 6rem;
+  }
+
+  .home-text-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-btn-side {
+    justify-content: center;
+  }
+
+  .destination {
+    margin-top: 4rem;
+    padding: 0 4rem 10% 4rem;
+  }
+
+  .destination-heading,
+  .crew-heading,
+  .technology-heading {
+    font-size: 2rem;
+  }
+
+  .planets {
+    flex-direction: column;
+  }
+
+  .planet-image-side {
+    width: 30rem;
+  }
+
+  .planet-text-side {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin-top: 4.8rem;
+  }
+
+  .planet-nav {
+    justify-content: center;
+  }
+
+  .planet-line {
+    margin-top: 0;
+  }
+
+  .planet-stats {
+    padding: 0 6rem 0 6rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .crew {
+    padding: 4rem 4rem 0 4rem;
+  }
+
+  .crew-slide {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .crew-txt-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  .member-name {
+    width: 100%;
+    text-align: center;
+    height: auto;
+  }
+
+  .about-member-container {
+    height: 9.6rem;
+    margin-top: 1.6rem;
+    text-align: center;
+  }
+
+  .slide-dots {
+    margin-top: 4rem;
+  }
+
+  .technology {
+    padding: 4rem 0 4rem 0;
+  }
+
+  .technology-heading {
+    padding: 0 0 0 4rem;
+  }
+
+  .technology-slide {
+    flex-direction: column-reverse;
+    margin-top: 4rem;
+  }
+
+  .tech-slide-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide-nums {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide-number {
+    padding: 1.6rem 2.4rem;
+    font-size: 2.4rem;
+  }
+
+  .tech-slide-left {
+    flex-direction: column;
+    margin-top: 4.8rem;
+    width: 100%;
+    padding: 0 2.4rem 0 2.4rem;
+  }
+
+  .tech-slide-txt {
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .technology-info {
+    height: 16rem;
+  }
+}
+
+@media (max-width: 31em) {
+  .logo-img {
+    width: 4rem;
+  }
+
+  .nav-list {
+    font-size: 1.4rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .header {
+    padding: 0 0 0 2.4rem;
+  }
+
+  .main-nav {
+    width: 90%;
+    padding: 2.4rem 2rem 0 2rem;
+  }
+
+  .home {
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 28em) {
+  body {
+    background-attachment: fixed;
+  }
+
+  .header {
+    padding: 2.4rem 2.4rem 0 2.4rem;
+    gap: 0;
+  }
+
+  .menu {
+    display: flex;
+    z-index: 3;
+  }
+
+  .blur {
+    width: 100%;
+    height: 100%;
+    background-color: #000000b6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in;
+    z-index: 1;
+  }
+
+  .blur-in {
+    transform: translateX(0);
+    transition: all 0.5s ease-in;
+  }
+
+  .main-nav {
+    background-color: #00000000;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .nav-list {
+    border: none;
+    display: flex;
+    padding: 0;
+  }
+
+  .active-link {
+    box-shadow: none;
+    color: #979797;
+  }
+
+  .nav-num {
+    display: block;
+    color: #979797;
+  }
+
+  .menu {
+    display: flex;
+    z-index: 3;
+  }
+
+  .header-content {
+    position: absolute;
+    flex-direction: column;
+    background-color: #0b0d17;
+    width: 60%;
+    height: 100vh;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    padding: 8rem 2.4rem 0 2.4rem;
+    align-items: flex-start;
+    gap: 1.6rem;
+    justify-content: start;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 0.5s ease-in;
+    transform: translateX(100%);
+  }
+
+  .nav-open {
+    transform: translateX(0);
+    transition: all 0.5s ease-in;
+  }
+
+  .home {
+    gap: 8rem;
+    padding: 2.4rem;
+  }
+
+  .home-heading {
+    font-size: 1.6rem;
+  }
+
+  .space-heading {
+    font-size: 8rem;
+  }
+
+  .home-description {
+    margin-top: 1.6rem;
+  }
+
+  .home-explore {
+    font-size: 2rem;
+    padding: 6.8rem 3.6rem;
+  }
+
+  .destination {
+    margin-top: 2.4rem;
+    padding: 0 2.4rem 4rem 2.4rem;
+  }
+
+  .destination-heading {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .planet-image-side {
+    width: 16rem;
+  }
+
+  .planet-text-side {
+    margin-top: 2.4rem;
+  }
+
+  .planet-name-list {
+    font-size: 1.4rem;
+  }
+
+  .planet-name {
+    font-size: 5.6rem;
+    margin-top: 2rem;
+  }
+
+  .planet-stats {
+    padding: 0;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  .crew {
+    padding: 0 2.4rem 4rem 2.4rem;
+    margin-top: 2.4rem;
+  }
+
+  .crew-heading {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .crew-slide {
+    flex-direction: column-reverse;
+    margin-top: 3.2rem;
+    gap: 3.2rem;
+  }
+
+  .crew-img-side {
+    width: 100%;
+    border-bottom: 0.2rem solid #979797;
+    display: flex;
+    justify-content: center;
+  }
+
+  .member-image {
+    width: 60%;
+  }
+
+  .crew-txt-side {
+    margin-top: 0;
+  }
+
+  .slide-dots {
+    order: -1;
+    margin-top: 0;
+  }
+
+  .member-position {
+    margin-top: 3.2rem;
+    font-size: 1.6rem;
+  }
+
+  .member-name {
+    margin-top: 0.8rem;
+    font-size: 2.4rem;
+  }
+
+  .about-member-container {
+    margin-top: 1.6rem;
+    height: 16rem;
+  }
+
+  .technology {
+    padding: 0;
+    margin-top: 2.4rem;
+  }
+
+  .technology-heading {
+    font-size: 1.6rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  .technology-slide {
+    margin-top: 2.4rem;
+  }
+
+  .tech-slide-left {
+    padding: 0 2.4rem 4rem 2.4rem;
+    margin-top: 3.2rem;
+    gap: 0;
+  }
+
+  .slide-number {
+    font-size: 1.6rem;
+    padding: 1rem 1.6rem;
+  }
+
+  .tech-slide-txt {
+    margin-top: 2.4rem;
+  }
+
+  .terminology {
+    font-size: 1.4rem;
+  }
+
+  .info-heading {
+    font-size: 2.4rem;
+    margin-top: 0.8rem;
+  }
+}
