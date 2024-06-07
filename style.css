@@ -4,7 +4,6 @@
   list-style-type: none;
   text-decoration: none;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 :root {
@@ -26,10 +25,6 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   transition: background-image 0.5s ease-in-out;
-}
-
-main {
-  overflow-x: hidden;
 }
 
 .header {
@@ -214,7 +209,6 @@ main {
   /* gap: 20rem; */
   align-items: end;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  overflow-x: hidden;
 }
 
 .home-heading {
@@ -271,7 +265,6 @@ main {
   padding: 0 16rem 10% 16rem;
   transition: 0.2s ease-in-out;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  overflow-x: hidden;
 }
 
 .destination-heading,
@@ -390,7 +383,6 @@ main {
 
 .crew {
   padding: 4% 14rem 0 16rem;
-  overflow-x: hidden;
 }
 
 .crew-slide {
@@ -445,7 +437,6 @@ main {
 .crew-img-side {
   width: 40%;
   height: 60.2rem;
-  overflow: hidden;
 }
 
 .member-image {
@@ -477,7 +468,6 @@ main {
 
 .technology {
   padding: 4% 0 4% 16rem;
-  overflow-x: hidden;
 }
 
 .technology-slide {
