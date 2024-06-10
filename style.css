@@ -15,6 +15,7 @@
 html {
   width: 100%;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -958,7 +959,7 @@ body {
   }
 
   .header-content {
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     background-color: #0b0d17;
     width: 60%;
